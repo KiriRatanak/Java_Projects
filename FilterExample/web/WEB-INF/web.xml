@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+    <servlet>
+        <servlet-name>LandingPage</servlet-name>
+        <servlet-class>LandingPage</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LandingPage</servlet-name>
+        <url-pattern>/LandingPage</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>Login</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+    <filter>
+        <filter-name>EncryptionFilter</filter-name>
+        <filter-class>EncryptionFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>EncryptionFilter</filter-name>
+        <url-pattern>/Login</url-pattern>
+        <url-pattern>/LandingPage</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+    </filter-mapping>
+    
+    
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
+
+
+
+
+
+  
