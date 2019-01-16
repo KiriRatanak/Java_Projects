@@ -17,8 +17,10 @@ import javax.servlet.ServletResponse;
  *
  * @author sparrow
  */
-public class EmailFilter implements Filter {
+public class PasswordFilter implements Filter {
 
+    
+    
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
         Filter.super.init(filterConfig); //To change body of generated methods, choose Tools | Templates.
@@ -31,7 +33,7 @@ public class EmailFilter implements Filter {
         if(email.contains("@")){
             if(email.contains(".")){
 //                request
-//                        .getRequestDispatcher("LandingPage")
+//                        .getRequestDispatcher("Login.jsp")
 //                        .forward(request,response);
             }
             
