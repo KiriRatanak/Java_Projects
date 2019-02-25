@@ -4,6 +4,10 @@
         <servlet-name>LandingPage</servlet-name>
         <servlet-class>LandingPage</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>LogoutServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LandingPage</servlet-name>
         <url-pattern>/LandingPage</url-pattern>
@@ -11,6 +15,10 @@
     <listener>
         <listener-class>SessionCounter</listener-class>
     </listener>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30

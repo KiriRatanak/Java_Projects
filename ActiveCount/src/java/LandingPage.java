@@ -27,7 +27,7 @@ public class LandingPage extends HttpServlet {
         processRequest(request, response);
     }
 
-    
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -35,8 +35,9 @@ public class LandingPage extends HttpServlet {
         
         String username = new String(request.getParameter("user"));
         
-        HttpSession session = request.getSession();
-        session.setAttribute("user", username);
+        HttpSession session = request.getSession(false);
+//        System.out.println(session.getId());
+//        session.setAttribute("user", username);
         
        
         
@@ -48,6 +49,7 @@ public class LandingPage extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Active user: " +  SessionCounter.getActiveSession() + "</h1>");
+            out.println("<a href='LogoutServlet'>Logout</a>");
             out.println("</body>");
             out.println("</html>");
         }

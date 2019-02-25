@@ -17,10 +17,12 @@ public class SessionCounter implements HttpSessionListener {
     private static int activeSession = 0;
     
     public void sessionCreated(HttpSessionEvent ev) {
+        System.out.println("Session created");
         ++activeSession;
     }
     
     public void sessionDestroyed(HttpSessionEvent ev) {
+        System.out.println("Session destroyed");
         --activeSession;
     }
     
